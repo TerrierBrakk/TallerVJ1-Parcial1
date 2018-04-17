@@ -26,9 +26,6 @@ public class Movement : MonoBehaviour {
 
 	void Salto()
 	{
-		var salto = Input.GetAxis ("Vertical") * Time.deltaTime * 40.0f;
 
-
-			transform.Translate (0, salto, 0);
 	}
 }
