@@ -21,8 +21,7 @@ GameObject:
   - component: {fileID: 4021367317109000}
   - component: {fileID: 33222454588547846}
   - component: {fileID: 23467573926005396}
-  - component: {fileID: 135794797298490156}
-  - component: {fileID: 114514022134695108}
+  - component: {fileID: 135403780287234200}
   m_Layer: 0
   m_Name: 7. Vertex Animation & Emission
   m_TagString: Untagged
@@ -37,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1257893880975606}
   m_LocalRotation: {x: 0, y: -0.000000029802322, z: 0, w: 1}
-  m_LocalPosition: {x: -5.99999, y: 1.0061808, z: -11.500031}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.438, y: 0.177, z: -0.09}
+  m_LocalScale: {x: 0.09132936, y: 0.09132935, z: 0.09132935}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,19 +81,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1257893880975606}
   m_Mesh: {fileID: 4300030, guid: 27cd3ffabf618924f9c9eeefb09b60e0, type: 3}
---- !u!114 &114514022134695108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1257893880975606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aa8c0bd4777c43ba983f5819ce0f5f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Vertex Animation & Emission
---- !u!135 &135794797298490156
+--- !u!135 &135403780287234200
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,5 +91,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4338435
-  m_Center: {x: 0.2081325, y: -0.000009000301, z: 0.0000075101852}
+  m_Radius: 1.4338434
+  m_Center: {x: 0.20813249, y: -0.0000090003, z: 0.000007510185}
