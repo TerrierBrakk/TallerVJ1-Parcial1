@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 715671833}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1937,7 +1937,7 @@ Animator:
   m_GameObject: {fileID: 1496336492}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 33a688706840bb4418f35a2b961ab2dc, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71f3aa66707c5004380866a870809486, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2099,7 +2099,7 @@ GameObject:
   - component: {fileID: 1714514434}
   m_Layer: 0
   m_Name: Duida Charcter (Scripts and Collideres, Prefab This)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -6488666005112524639, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

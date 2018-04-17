@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-
-
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +13,6 @@ public class Movement : MonoBehaviour {
 	void Update()
 	{
 		Movimiento ();
-		Salto ();
 	}
 
 	void Movimiento()
@@ -24,8 +21,5 @@ public class Movement : MonoBehaviour {
 		transform.Translate(mov, 0, 0);
 	}
 
-	void Salto()
-	{
-		
-	}
+
 }
