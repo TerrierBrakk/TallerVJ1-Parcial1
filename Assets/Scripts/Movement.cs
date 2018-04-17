@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour {
 
 	void Movimiento()
 	{
-		var mov = Input.GetAxis("Horizontal") * Time.deltaTime * 10.0f;
+		var mov = Input.GetAxis("Horizontal") * Time.deltaTime * 5.0f;
 		transform.Translate(mov, 0, 0);
 	}
 
