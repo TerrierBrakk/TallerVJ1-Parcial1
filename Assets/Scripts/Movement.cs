@@ -55,18 +55,27 @@ public class Movement : MonoBehaviour {
 
 	void Movimiento() ///funcion de movimiento en el eje x
 		{
+			
 			float mov = Input.GetAxis("Horizontal") * Time.deltaTime * 3.0f;
+			transform.Translate (mov, 0, 0);
+			float posX = transform.position.x;
 
-		if (mov >= limXpos) {
-	
-			mov = limXpos;
-		}
+		if (posX >= limXpos) 
+		
+			{
+				Vector3 pos = transform.position;
+				pos.x = limXpos;
+				transform.position = pos;
+			}
 
-		if (mov <= limXneg) {
+		if (posX <= limXneg) 
+			{
 
-			mov = limXneg;
-		}
-		transform.Translate (mov, 0, 0);
+				Vector3 pos = transform.position;
+				pos.x = limXneg;
+				transform.position = pos;
+			}
+
 		}
 
 	void saltar() // Funcion para saltar
