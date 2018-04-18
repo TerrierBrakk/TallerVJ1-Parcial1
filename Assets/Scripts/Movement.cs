@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 	
+	//escenario limite
+	float limXpos = 1.20f;
+	float limXneg = -1.20f;
+
+
 
 	private Rigidbody rb;
 	Animator anim;
@@ -21,23 +26,59 @@ public class Movement : MonoBehaviour {
 	{
 		Movimiento ();
 		saltar ();
+
+		/*if (Input.GetKey (KeyCode.A)) 
+		{
+			Pos_X = Pos_X - 1.0f * Time.deltaTime;
+		}
+
+		if (Input.GetKey (KeyCode.D)) 
+		{
+			Pos_X = Pos_X + 1.0f * Time.deltaTime;
+		}
+
+		if (Pos_X >= 1.0f) 
+		{
+			Pos_X = 1.0f;
+		}
+
+		if (Pos_X <= -1.0f) 
+		{
+			Pos_X = -1.0f;
+		}
+
+		Pos_Z += 1.0 * Time.deltaTime;
+
+		transform.position = Vector3 (Pos_X, 0, Pos_Z);*/
 	}
 
 
 	void Movimiento() ///funcion de movimiento en el eje x
 		{
 			float mov = Input.GetAxis("Horizontal") * Time.deltaTime * 3.0f;
-			transform.Translate(mov, 0, 0);
+
+		if (mov >= limXpos) {
+	
+			mov = limXpos;
+		}
+
+		if (mov <= limXneg) {
+
+			mov = limXneg;
+		}
+		transform.Translate (mov, 0, 0);
 		}
 
 	void saltar() // Funcion para saltar
 		{
-			Debug.Log (isGrounded ());
+			
 
 			if (Input.GetButtonDown ("Jump")&&isGrounded())
 			{
 				
-				rb.velocity = new Vector3 (0, 4, 0);
+			rb.velocity = new Vector3 (0, 5, 0);
+			print ("Salte");
+			anim.Play ("Jump");
 			}		
 		}
 		
