@@ -7,9 +7,8 @@ public class Movement : MonoBehaviour {
 	//escenario limite
 	float limXpos = 1.20f;
 	float limXneg = -1.20f;
-
-
-
+	bool salto=false;
+	//animator, rigibody y grounded
 	private Rigidbody rb;
 	Animator anim;
 	private float isground =0.2f;
@@ -27,55 +26,34 @@ public class Movement : MonoBehaviour {
 		Movimiento ();
 		saltar ();
 
-		/*if (Input.GetKey (KeyCode.A)) 
-		{
-			Pos_X = Pos_X - 1.0f * Time.deltaTime;
-		}
-
-		if (Input.GetKey (KeyCode.D)) 
-		{
-			Pos_X = Pos_X + 1.0f * Time.deltaTime;
-		}
-
-		if (Pos_X >= 1.0f) 
-		{
-			Pos_X = 1.0f;
-		}
-
-		if (Pos_X <= -1.0f) 
-		{
-			Pos_X = -1.0f;
-		}
-
-		Pos_Z += 1.0 * Time.deltaTime;
-
-		transform.position = Vector3 (Pos_X, 0, Pos_Z);*/
 	}
 
 
 	void Movimiento() ///funcion de movimiento en el eje x
 		{
 			
-			float mov = Input.GetAxis("Horizontal") * Time.deltaTime * 3.0f;
-			transform.Translate (mov, 0, 0);
-			float posX = transform.position.x;
+		float posX;
 
-		if (posX >= limXpos) 
+		//if (salto == false) {
+			float mov = Input.GetAxis ("Horizontal") * Time.deltaTime * 3.0f;
+			transform.Translate (mov, 0, 0);
+			posX = transform.position.x;
 		
-			{
+
+			// Condiciones de limite de movimiento 
+			if (posX >= limXpos) {
 				Vector3 pos = transform.position;
 				pos.x = limXpos;
 				transform.position = pos;
 			}
 
-		if (posX <= limXneg) 
-			{
+			if (posX <= limXneg) {
 
 				Vector3 pos = transform.position;
 				pos.x = limXneg;
 				transform.position = pos;
+						
 			}
-
 		}
 
 	void saltar() // Funcion para saltar
@@ -86,6 +64,7 @@ public class Movement : MonoBehaviour {
 			{
 				
 			rb.velocity = new Vector3 (0, 5, 0);
+			salto = true;
 			print ("Salte");
 			anim.Play ("Jump");
 			}		
