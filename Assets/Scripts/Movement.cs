@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour {
 			if (Input.GetButtonDown ("Jump")&&isGrounded())
 			{
 				
-			rb.velocity = new Vector3 (0, 5, 0);
+			rb.velocity = new Vector3 (0, 6, 0);
 			salto = true;
 			print ("Salte");
 			anim.Play ("Jump");
