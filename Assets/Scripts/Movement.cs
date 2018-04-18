@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour {
 	{
 		Movimiento ();
 		saltar ();
+		deslizar ();
 
 	}
 
@@ -67,6 +68,15 @@ public class Movement : MonoBehaviour {
 			salto = true;
 			print ("Salte");
 			anim.Play ("Jump");
+			}		
+		}
+
+		void deslizar()
+		{
+			if (Input.GetButtonDown ("Fire1")&&isGrounded())
+			{
+				print ("Slide");
+				anim.Play ("Slide");
 			}		
 		}
 		
