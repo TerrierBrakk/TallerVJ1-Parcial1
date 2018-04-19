@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	int contador;
+	public Text Score;
+
+
+	public void OnTriggerEnter(Collider other)
+	{
+		Destroy (other.gameObject);
+		contador = contador + 1;
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void marcador()
+	{
+		Score.text = " Score: " + contador;
 	}
 }
