@@ -5,9 +5,15 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
+
 	int contador;
 	public Text Score;
 
+	void Update()
+	{
+
+
+	}
 
 	public void OnTriggerEnter(Collider other)
 	{

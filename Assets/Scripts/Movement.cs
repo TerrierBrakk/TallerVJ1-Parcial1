@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour {
 		float posX;
 
 		//if (salto == false) {
-			float mov = Input.GetAxis ("Horizontal") * Time.deltaTime * 3.0f;
+			float mov = Input.GetAxis ("Horizontal") * Time.deltaTime * 2.0f;
 			transform.Translate (mov, 0, 0);
 			posX = transform.position.x;
 		
