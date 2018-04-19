@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour {
 			if (Input.GetButtonDown ("Jump")&&isGrounded())
 			{
 				
-			rb.velocity = new Vector3 (0, 6, 0);
+			rb.velocity = new Vector3 (0, 5.5f, 0);
 			salto = true;
 			print ("Salte");
 			anim.Play ("Jump");
@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour {
 			return Physics.Raycast (transform.position, Vector3.down, isground);
 		}
 		
-	/*
+
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.collider.CompareTag("Dano")){
@@ -94,6 +94,8 @@ public class Movement : MonoBehaviour {
 			anim.Play ("Death");
 
 		}
-	}*/
+
+
 	}
 
+}

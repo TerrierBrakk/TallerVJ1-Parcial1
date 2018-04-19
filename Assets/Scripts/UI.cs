@@ -4,21 +4,33 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
+	
 
-
-	int contador;
+	static int contador;
 	public Text Score;
 
+	void Start()
+	{
+		Score = GameObject.FindGameObjectWithTag ("UiScore").GetComponent<Text>();
+	}
 	void Update()
 	{
-
+		marcador ();
 
 	}
 
 	public void OnTriggerEnter(Collider other)
 	{
-		Destroy (other.gameObject);
-		contador = contador + 1;
+		{
+			if (other.GetComponent<Collider>().CompareTag ("Player")) 
+			{
+				print ("agarreobjet6o");
+				contador = contador + 1;
+				gameObject.SetActive(false);
+
+			}
+
+		}
 
 	}
 

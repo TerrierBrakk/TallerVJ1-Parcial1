@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Dano
+  - puntos
+  - UiScore
   layers:
   - Default
   - TransparentFX
