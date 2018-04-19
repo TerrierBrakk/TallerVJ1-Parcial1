@@ -9,7 +9,6 @@ public class spawner : MonoBehaviour {
 	public float Frecuencia = 1f;
     Vector3 spawnInicial;
     float DistanciaZ = 3.1f;
-
 	private void Start()
 	{
 		objectPooler = pooler.Instance;
@@ -17,7 +16,7 @@ public class spawner : MonoBehaviour {
         spawnInicial = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         for (int i = 0; i < 7; i++)
         {
-            objectPooler.SpawnFromPool("obstaculo", spawnInicial, Quaternion.identity);
+            objectPooler.SpawnFromPool("nivel", spawnInicial, Quaternion.identity);
             spawnInicial.z -= DistanciaZ;
 
         }
@@ -30,7 +29,7 @@ public class spawner : MonoBehaviour {
 	
 		if (tiempo_generar < Time.time) {
 		
-			objectPooler.SpawnFromPool ("obstaculo", transform.position, Quaternion.identity);
+			objectPooler.SpawnFromPool ("nivel", transform.position, Quaternion.identity);
 			tiempo_generar = Time.time + Frecuencia;
 		}
 			
