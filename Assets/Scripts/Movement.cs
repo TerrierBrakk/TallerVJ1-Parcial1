@@ -85,15 +85,15 @@ public class Movement : MonoBehaviour {
 			return Physics.Raycast (transform.position, Vector3.down, isground);
 		}
 		
-	void OnTriggerEnter(Collision col)
+	/*
+	void OnCollisionEnter(Collision col)
 	{
-		switch(col.gameObject.tag) 
-		{
-		case "Dano":
-			print ("recibidaño");
+		if (col.collider.CompareTag("Dano")){
+			Debug.Break ();
+			print ("MORI");
 			anim.Play ("Death");
-			break;
+
 		}
-	}
+	}*/
 	}
 

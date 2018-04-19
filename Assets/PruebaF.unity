@@ -555,7 +555,7 @@ MonoBehaviour:
     prefab: {fileID: 1752666818986434, guid: 6b98667fb2160124f8002b28c4e8ac1d, type: 2}
     size: 15
   - tag: obstaculo
-    prefab: {fileID: 1600159381424704, guid: 9b5c072452bff43438cdde9ebf09aca7, type: 2}
+    prefab: {fileID: 1023410859078704, guid: 327d24122a758c54ab759cde98f057d4, type: 2}
     size: 50
 --- !u!4 &330055971
 Transform:
@@ -1028,6 +1028,11 @@ Prefab:
         type: 2}
       propertyPath: height
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54572724830699162, guid: 2c8835ead60bb0145910da5d94a75a7a,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 136276153193423706, guid: 2c8835ead60bb0145910da5d94a75a7a, type: 2}

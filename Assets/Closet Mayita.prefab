@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23537003922201904}
   m_Layer: 0
   m_Name: Box001
-  m_TagString: Untagged
+  m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 23340741951762226}
   m_Layer: 0
   m_Name: Box003
-  m_TagString: Untagged
+  m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114577198536789452}
   m_Layer: 0
   m_Name: Closet Mayita
-  m_TagString: Untagged
+  m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 23671906183574586}
   m_Layer: 0
   m_Name: Box002
-  m_TagString: Untagged
+  m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
