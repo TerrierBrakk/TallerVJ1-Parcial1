@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
+
+
+    public GameObject GameOverUI;
 	
 	//escenario limite
 	float limXpos = 1.20f;
@@ -12,10 +15,12 @@ public class Movement : MonoBehaviour {
 	private Rigidbody rb;
 	Animator anim;
 	private float isground =0.2f;
-	public float height;
+
+   
 
 	// Use this for initialization
 	void Start () {
+        
 		rb = GetComponent<Rigidbody> ();	
 		anim = GetComponent<Animator> ();
 	}
@@ -88,12 +93,12 @@ public class Movement : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.collider.CompareTag("Dano")){
-			Debug.Break ();
-			print ("MORI");
-			anim.Play ("Death");
+        if (col.collider.CompareTag("Dano")) {
+            print("MORI");
+            anim.Play("Death");
+            GameOverUI.SetActive(true);
 
-		}
+             }
 
 
 	}

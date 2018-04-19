@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menuprincipal.unity
     guid: dc43c2ce53ebd184cbcf67941e6e6e17
+  - enabled: 1
+    path: Assets/SceneCol.unity
+    guid: afe103ffdb4be2e4c840ddcc379cf3a5
