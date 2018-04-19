@@ -13,7 +13,19 @@ public class gameovermenu : MonoBehaviour
         Time.timeScale = 0f;
 
     }
+<<<<<<< HEAD
    
+=======
+    */
+    void  Update()
+    {
+        if(Time.timeScale >= 0)
+        {
+            Time.timeScale = 0.05f;
+        }
+        
+    }
+>>>>>>> 558907813622c11cddb62b6befa1909e5932a6f7
 
     public void Reinciar()
     {

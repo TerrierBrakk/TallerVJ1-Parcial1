@@ -14,10 +14,16 @@ public class Movement : MonoBehaviour {
 	//animator, rigibody y grounded
 	private Rigidbody rb;
 	Animator anim;
-	private float isground =0.2f;
+	private float isground =0.3f;
 
-   
+	/// 
+	public AudioClip hit;
+	public AudioSource snd;   
 
+	void Awake()
+	{
+		snd = GetComponent<AudioSource> ();
+	}
 	// Use this for initialization
 	void Start () {
         
@@ -69,10 +75,11 @@ public class Movement : MonoBehaviour {
 			if (Input.GetButtonDown ("Jump")&&isGrounded())
 			{
 				
-			rb.velocity = new Vector3 (0, 5.5f, 0);
+			rb.velocity = new Vector3 (0, 5.8f, 0);
 			salto = true;
 			print ("Salte");
 			anim.Play ("Jump");
+
 			}		
 		}
 
@@ -93,12 +100,14 @@ public class Movement : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-        if (col.tag == "Dano") {
-            print("MORI");
-            anim.Play("Death");
-            GameOverUI.SetActive(true);
+        if (col.tag == "Dano") 
+			{
+	            print("MORI");
+	            anim.Play("Death");
+				snd.PlayOneShot(hit);
+		     	GameOverUI.SetActive(true);
 
-             }
+	        }
 
 
 	}
