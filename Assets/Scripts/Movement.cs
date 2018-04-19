@@ -91,9 +91,9 @@ public class Movement : MonoBehaviour {
 		}
 		
 
-	void OnCollisionEnter(Collision col)
+	void OnTriggerEnter(Collider col)
 	{
-        if (col.collider.CompareTag("Dano")) {
+        if (col.tag == "Dano") {
             print("MORI");
             anim.Play("Death");
             GameOverUI.SetActive(true);
