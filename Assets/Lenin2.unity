@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -483,6 +483,9 @@ MonoBehaviour:
   - tag: obstaculo
     prefab: {fileID: 1600159381424704, guid: 9b5c072452bff43438cdde9ebf09aca7, type: 2}
     size: 50
+  - tag: orbe
+    prefab: {fileID: 1669009637163146, guid: 761ecc86a2635604c8e6cc5d4c160b97, type: 2}
+    size: 50
 --- !u!4 &330055971
 Transform:
   m_ObjectHideFlags: 0
@@ -847,7 +850,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573007899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -2}
+  m_LocalPosition: {x: 0, y: 1.47, z: -2.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1419,6 +1422,11 @@ Prefab:
         type: 2}
       propertyPath: Frecuencia
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114236057833772202, guid: 17f5e7278ba152649adc2c950254b7a4,
+        type: 2}
+      propertyPath: FrecOrbes
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17f5e7278ba152649adc2c950254b7a4, type: 2}
