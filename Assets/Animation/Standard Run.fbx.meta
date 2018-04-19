@@ -114,7 +114,7 @@ ModelImporter:
     3300000: default
     4300000: default
     4300002: RetopoGroup2
-    7400000: mixamo.com
+    7400000: correr
     9500000: //RootNode
     13700000: RetopoGroup2
   externalObjects: {}
@@ -145,7 +145,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: correr
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 15

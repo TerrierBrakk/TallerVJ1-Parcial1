@@ -72,7 +72,8 @@ public class Movement : MonoBehaviour {
 			rb.velocity = new Vector3 (0, 5.5f, 0);
 			salto = true;
 			print ("Salte");
-			anim.Play ("Jump");
+			anim.SetTrigger ("Salta");
+
 			}		
 		}
 
@@ -96,7 +97,7 @@ public class Movement : MonoBehaviour {
         if (col.tag == "Dano") {
             print("MORI");
             anim.Play("Death");
-            GameOverUI.SetActive(true);
+//            GameOverUI.SetActive(true);
 
              }
 

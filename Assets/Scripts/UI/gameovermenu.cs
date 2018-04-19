@@ -18,7 +18,7 @@ public class gameovermenu : MonoBehaviour
     {
         if(Time.timeScale >= 0)
         {
-            Time.timeScale -= .05f;
+            Time.timeScale = 0.05f;
         }
         
     }
