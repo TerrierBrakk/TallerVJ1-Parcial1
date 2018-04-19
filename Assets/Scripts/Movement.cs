@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour {
 	private Rigidbody rb;
 	Animator anim;
 	private float isground =0.2f;
-
+	public float height;
 
 	// Use this for initialization
 	void Start () {
@@ -84,5 +84,16 @@ public class Movement : MonoBehaviour {
 		{
 			return Physics.Raycast (transform.position, Vector3.down, isground);
 		}
+		
+	void OnTriggerEnter(Collision col)
+	{
+		switch(col.gameObject.tag) 
+		{
+		case "Dano":
+			print ("recibidaño");
+			anim.Play ("Death");
+			break;
+		}
+	}
 	}
 
