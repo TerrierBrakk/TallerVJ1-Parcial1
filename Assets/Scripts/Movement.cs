@@ -102,10 +102,10 @@ public class Movement : MonoBehaviour {
 	{
         if (col.tag == "Dano") 
 			{
-	            print("MORI");
+            GameOverUI.SetActive(true);
+            print("MORI");
 	            anim.Play("Death");
-				snd.PlayOneShot(hit);
-		     	GameOverUI.SetActive(true);
+				//snd.PlayOneShot(hit);
 
 	        }
 
