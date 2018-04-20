@@ -18,17 +18,17 @@ public class Movement : MonoBehaviour {
 
 	/// 
 	public AudioClip hit;
-	public AudioSource snd;   
 
-	void Awake()
-	{
-		snd = GetComponent<AudioSource> ();
-	}
+	AudioSource source;
+	  
+
+
 	// Use this for initialization
 	void Start () {
         
 		rb = GetComponent<Rigidbody> ();	
 		anim = GetComponent<Animator> ();
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour {
 		float posX;
 
 		//if (salto == false) {
-			float mov = Input.GetAxis ("Horizontal") * Time.deltaTime * 2.0f;
+			float mov = Input.GetAxis ("Horizontal") * Time.deltaTime * 2.5f;
 			transform.Translate (mov, 0, 0);
 			posX = transform.position.x;
 		
@@ -100,14 +100,16 @@ public class Movement : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col)
 	{
-        if (col.tag == "Dano") 
-			{
-            GameOverUI.SetActive(true);
-            print("MORI");
-	            anim.Play("Death");
-				//snd.PlayOneShot(hit);
+		if (col.tag == "Dano") {
+			GameOverUI.SetActive (true);
+			print ("MORI");
+			anim.Play ("Death");
+			source.clip = hit;
+			source.Play ();
 
-	        }
+
+		} 
+
 
 
 	}

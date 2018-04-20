@@ -12,6 +12,7 @@ public class UI : MonoBehaviour {
 	void Start()
 	{
 		Score = GameObject.FindGameObjectWithTag ("UiScore").GetComponent<Text>();
+		contador = 0;
 	}
 	void Update()
 	{
@@ -22,13 +23,12 @@ public class UI : MonoBehaviour {
 	public void OnTriggerEnter(Collider other)
 	{
 		{
-			if (other.GetComponent<Collider>().CompareTag ("Player")) 
-			{
+			if (other.GetComponent<Collider> ().CompareTag ("Player")) {
 				print ("agarreobjet6o");
 				contador = contador + 1;
-				gameObject.SetActive(false);
+				gameObject.SetActive (false);
 
-			}
+			} 
 
 		}
 
